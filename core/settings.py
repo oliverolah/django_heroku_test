@@ -1,11 +1,13 @@
 from pathlib import Path
+import django_heroku
+import dj_database_url
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-75)f+&of7ck&pqo+u96d7%!u^u(bp!-hevktmp2^y+0=52ra$2'
-DEBUG = True
-ALLOWED_HOSTS = []
+DEBUG = False
+ALLOWED_HOSTS = ['https://herokutestonecardiffmet.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -107,6 +109,7 @@ STATICFILES_DIRS = [
     BASE_DIR / 'staticfiles'
 ]
 STATIC_ROOT = BASE_DIR / 'static'
+# django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
